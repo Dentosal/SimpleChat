@@ -1,0 +1,18 @@
+{% extends "page.html" %}
+
+{% block head %}
+<script src="static/js/chat.js" charset="utf-8"></script>
+<script src="static/js/topbar.js" charset="utf-8"></script>
+<script src="static/js/sidebar.js" charset="utf-8"></script>
+{% endblock %}
+
+{% block content %}
+
+{% include "topbar.html" %}
+{% include "sidebar.html" %}
+
+<div id="content">
+    <ul id="messages"></ul>
+    <div id="sendbox"><input id="message" type="text" placeholder="Write a message..."></input></div>
+</div>
+{% endblock %}

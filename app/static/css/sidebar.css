@@ -1,0 +1,60 @@
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 9;
+    padding-top: 50px;
+    background-color: #789;
+
+    overflow-x: hidden;
+    overflow-y: none;
+    transition: 0.25s;
+
+    max-width: 50%;
+}
+
+#sidebar #chats {
+    overflow-y: scroll;
+    height: calc(100% - 50px);
+    text-align: center;
+    font-size: 3rem;
+}
+
+#sidebar[expanded="false"] #chats {
+    visibility: hidden;
+}
+
+
+#sidebar #chats:empty::after {
+    content: "No chats";
+}
+
+#sidebar #chats > li {
+    list-style-type: none;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    border-top: 1px solid #89a;
+}
+#sidebar #chats > li:last-child {
+    border-bottom: 1px solid #89a;
+}
+
+#sidebar #chats > li.selected {
+    background: #eee !important;
+}
+
+#sidebar #chats > li:hover {
+    background: #abc;
+}
+
+#sidebar #chats > li[channel=true]::before {
+    content: "#";
+}

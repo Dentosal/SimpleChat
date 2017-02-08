@@ -1,0 +1,47 @@
+{% extends "page.html" %}
+
+{% block head %}
+<script src="static/js/register.js" charset="utf-8"></script>
+{% endblock %}
+
+{% block content %}
+<div class="centered content-box">
+    <div class="row align-center">
+        <h1>SimpleChat - Register</h1>
+    </div>
+    <div class="row">
+        <div class="row">
+            <span id="error" class="error"></span>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <label for="username">Username</label>
+                <input id="username" class="u-full-width" type="text" placeholder="username" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+            <div class="six columns">
+                <ul class="no-points">
+                    <li id="length_ok" valid="false">At least three characters, and less than 100</li>
+                    <li id="al_num_ok" valid="false">Only alphanumerics and underscores</li>
+                    <li id="unique_ok" valid="false">Available</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <label for="password">Password</label>
+                <input id="password" class="u-full-width" type="password" placeholder="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+            <div class="six columns">
+                <label for="password_confirm">Confirm Password</label>
+                <input id="password_confirm" class="u-full-width" type="password" placeholder="password_confirm" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+        </div>
+        <div class="row">
+            <input id="register" class="twelve columns" type="button" value="Register">
+        </div>
+        <div class="row align-center">
+            Already have an account? <a href="/login">Log in!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

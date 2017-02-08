@@ -1,0 +1,59 @@
+/* Disable "overscrolling" bounce*/
+html {height: 100%; overflow: hidden;}
+body {height: 100%; overflow: auto;}
+
+.align-center {
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.no-points {
+    list-style-type: none;
+}
+
+.no-points li {
+    margin: 0;
+}
+
+.content-box {
+    min-width: 400px;
+    width: 80%;
+    margin: 5px;
+    padding: 20px;
+}
+
+.content-box h1 {
+    font-size: 3rem;
+}
+
+.content-box div.row:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[valid="true"]::before {
+    content: '✔';
+    color: green;
+    margin: 0 5px;
+}
+[valid="false"]::before {
+    content: '✘';
+    color: red;
+    margin: 0 5px;
+}

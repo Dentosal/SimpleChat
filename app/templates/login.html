@@ -1,0 +1,28 @@
+{% extends "page.html" %}
+
+{% block head %}
+<script src="static/js/login.js" charset="utf-8"></script>
+{% endblock %}
+
+{% block content %}
+<div class="centered content-box six columns">
+    <div class="row align-center">
+        <h1>SimpleChat - Log In</h1>
+    </div>
+    <div class="row">
+        <div class="row">
+            <span id="error" class="error"></span>
+        </div>
+        <div class="row">
+            <input class="six columns" type="text"     id="username" placeholder="username" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <input class="six columns" type="password" id="password" placeholder="password" autocorrect="off" autocapitalize="off" spellcheck="false">
+        </div>
+        <div class="row">
+            <input id="login" class="twelve columns" type="button" value="Log In">
+        </div>
+        <div class="row align-center">
+            Don't have an account? <a href="/register">Register!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

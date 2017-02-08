@@ -1,0 +1,83 @@
+#topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 50px;
+    background: #333;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+
+    z-index: 99;
+}
+
+#topbar > div {
+    margin: 5px 10px;
+    color: white;
+}
+
+#topbar > div#expandlock {
+    cursor: pointer;
+}
+
+#topbar > div#newchat {
+    line-height: 40px;
+    height: 40px;
+}
+
+#topbar > div#newchat > input#newchatsearch {
+    background: none;
+    color: #fff;
+    min-width: 180px;
+    padding: 2px 5px;
+    font-size: 1.4rem;
+}
+
+#topbar > div#newchat > input#newchatsearch::placeholder {
+    color: #fff; text-align: center; cursor: pointer;
+}
+#topbar > div#newchat > input#newchatsearch::-webkit-input-placeholder {
+    color: #fff; text-align: center; cursor: pointer;
+}
+#topbar > div#newchat > input#newchatsearch::-ms-input-placeholder {
+    color: #fff; text-align: center; cursor: pointer;
+}
+
+#topbar > div#newchat > input#newchatsearch:focus::placeholder {
+    visibility: hidden; cursor: auto;
+}
+#topbar > div#newchat > input#newchatsearch:focus::-webkit-input-placeholder {
+    visibility: hidden; cursor: auto;
+}
+#topbar > div#newchat > input#newchatsearch:focus::-ms-input-placeholder {
+    visibility: hidden; cursor: auto;
+}
+
+#topbar > div#newchat > div#newchatresults:not(:empty) {
+    background: #333;
+    margin: -50px 0 0 0;
+    padding: 45px 5px 5px 5px;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    z-index: 990;
+}
+
+#topbar > div#newchat > div#newchatresults div:hover {
+    background: #555;
+}
+
+#topbar > div#title {
+    margin: auto;
+}
+
+#topbar > div#logout {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 2px 5px;
+}

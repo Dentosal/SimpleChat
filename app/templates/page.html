@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "head.html" %}
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+        {% include "requiresjs.html" %}
+    </body>
+</html>

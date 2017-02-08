@@ -1,0 +1,57 @@
+body {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    background: #eee;
+    height: calc(100vh - 50px);
+    margin-left: 250px;
+    padding-top: 50px;
+    transition: margin-left 0.25s, background 0.25s;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+#messages {
+    overflow-y: scroll;
+    width: 100% !important;
+}
+
+#messages > li {
+    margin-left: 5%;
+    width: 90%;
+    list-style-type: none;
+}
+
+#messages > li span {
+    padding: 5px;
+}
+
+#messages > li span[name=sender] {
+    font-weight: bold;
+}
+
+#messages > li span[name=time] {
+    text-align: right;
+    white-space: nowrap;
+}
+
+#sendbox {
+    margin-left: 5%;
+    width: 90%;
+}
+#sendbox > input {
+    font-size: 1.6rem;
+    width: 100%;
+}

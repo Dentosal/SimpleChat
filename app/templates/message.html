@@ -1,0 +1,11 @@
+<div>
+    <span name="sender">{{ from }}</span>
+    <span name="time" time="{{ time }}"></span>
+</div>
+<div>
+    <div name="message">
+    {% for line in message.splitlines() %}
+        {{line}}<br>
+    {% endfor %}
+    </div>
+</div>
